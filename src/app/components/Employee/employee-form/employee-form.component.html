@@ -1,0 +1,69 @@
+<div class="container">
+    <img src="/assets/images/back-arrow.png" class="backbutton" alt="back" routerLink="/employee/employee-list">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card inner-card">
+                <h2 class="card-title text-center">{{employeeId?'Update':'Add'}}  Employee</h2>
+                <div class="card-body py-md-4">
+                    <form novalidate name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+                        <div class="form-group">
+                            <!-- <label for="name"> Name</label> -->
+                            <input type="text" class="form-control" id="name" placeholder="Name"
+                                [(ngModel)]="model.name" #fullname="ngModel" name="fname"
+                                [ngClass]="{ 'is-invalid': f.submitted && fullname.invalid }" required>
+                            <div *ngIf="f.submitted && fullname.invalid" class="invalid-feedback">
+                                <div *ngIf="fullname.errors.required">Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="dob" placeholder="Date of Birth"
+                                [(ngModel)]="model.dob" #dobModel="ngModel" name="date"
+                                [ngClass]="{ 'is-invalid': f.submitted && dobModel.invalid }" required>
+                            <div *ngIf="f.submitted && dobModel.invalid" class="invalid-feedback">
+                                <div *ngIf="dobModel.errors.required">Date of Birth is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="address" class="form-control" id="address" cols="3" rows="2"
+                                placeholder="Address" [(ngModel)]="model.address" #addressModel="ngModel" name="address"
+                                [ngClass]="{ 'is-invalid': f.submitted && addressModel.invalid }" required></textarea>
+                            <div *ngIf="f.submitted && addressModel.invalid" class="invalid-feedback">
+                                <div *ngIf="addressModel.errors.required">Address is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-control" name="role" [(ngModel)]="model.role" #roleModel="ngModel"
+                                [ngClass]="{ 'is-invalid': f.submitted && roleModel.invalid }" required>
+                                <option value=""> Select Role</option>
+                                <option *ngFor="let role of rolesList" [value]="role.value">{{role.name}}</option>
+                            </select>
+                            <div *ngIf="f.submitted && roleModel.invalid" class="invalid-feedback">
+                                <div *ngIf="roleModel.errors.required">Role is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="salary" placeholder="Salary"
+                                [(ngModel)]="model.salary" #salaryModel="ngModel" name="salary"
+                                [ngClass]="{ 'is-invalid': f.submitted && salaryModel.invalid }" required>
+                            <div *ngIf="f.submitted && salaryModel.invalid" class="invalid-feedback">
+                                <div *ngIf="salaryModel.errors.required">Salary is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="exp" placeholder="Experience"
+                                [(ngModel)]="model.experience" #expModel="ngModel" name="exp"
+                                [ngClass]="{ 'is-invalid': f.submitted && expModel.invalid }" required>
+                            <div *ngIf="f.submitted && expModel.invalid" class="invalid-feedback">
+                                <div *ngIf="expModel.errors.required">Experience is required</div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" type="submit">{{employeeId?'Update':'Add'}} Employee</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

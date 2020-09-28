@@ -1,0 +1,33 @@
+<div class="container-fluid table-responsive">
+    <div class="text-right">
+        <button  class="btn btn-primary mb-4 mt-1" routerLink="/employee/add-employee">Add Employee</button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Address</th>
+                <th scope="col">Role</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Experience</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employeeData;let i=index">
+                <th scope="row">{{emp.name}}</th>
+                <td>{{emp.dob}}</td>
+                <td>{{emp.address}}</td>
+                <td>{{emp.role}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.experience}}</td>
+                <td>
+                    <button type="button" class="btn btn-xs btn-primary" (click)="edit(emp)">Edit</button>
+                    <button type="button" class="btn btn-xs btn-danger" (click)="delete(emp)">Delete</button>
+                    <button type="button" class="btn btn-xs btn-primary" (click)="view(emp)">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

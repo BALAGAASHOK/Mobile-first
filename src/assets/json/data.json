@@ -1,0 +1,67 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Robert 12345",
+      "dob": "1996-10-03",
+      "address": "Madhapur,Kondhapur",
+      "role": "DEV",
+      "experience": "4",
+      "salary": "1"
+    },
+    {
+      "id": 2,
+      "name": "Antony",
+      "dob": "1995-0-21",
+      "address": "Madhapur,Kondhapur",
+      "role": "DEV",
+      "experience": "2",
+      "salary": "8"
+    },
+    {
+      "id": 3,
+      "name": "Anu",
+      "dob": "1995-07-06",
+      "address": "Madhapur,Kondhapur",
+      "role": "DEV",
+      "experience": "1",
+      "salary": "3"
+    },
+    {
+      "id": 4,
+      "name": "Ashok",
+      "dob": "1995-05-03",
+      "address": "Madhapur,Kondhapur",
+      "role": "DEV",
+      "experience": "4",
+      "salary": "12"
+    },
+    {
+      "id": 5,
+      "name": "Rahul",
+      "dob": "1995-08-14",
+      "address": "Madhapur,Kondhapur",
+      "role": "DEV",
+      "experience": "2",
+      "salary": "6"
+    },
+    {
+      "name": "kanna ",
+      "dob": "2020-09-18",
+      "role": "DEV",
+      "salary": "12",
+      "address": "afaag",
+      "experience": "1112",
+      "id": 6
+    },
+    {
+      "name": "raju balaga",
+      "dob": "2000-10-10",
+      "role": "DEV",
+      "salary": 35,
+      "address": "kapil towrs",
+      "experience": 12353,
+      "id": 8
+    }
+  ]
+}
